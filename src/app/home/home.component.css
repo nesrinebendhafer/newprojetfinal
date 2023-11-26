@@ -25,13 +25,13 @@ body {
 
 .utitle {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: red;
+  color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: rgb(255, 147, 147);
+  
 }
 
 /*news*/

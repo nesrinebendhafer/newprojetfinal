@@ -19,6 +19,10 @@ export class ActivitesComponent  implements OnInit {
   searchComite: string; 
   foundEvents: Act[] = []; 
   deleteId: number; 
+  modifyId: number;
+  modifyForm: FormGroup; // Declare modifyForm property in your component
+  showModifyForm = false;
+
 
   ngOnInit(): void {
     this.act.getAct().subscribe(
@@ -84,6 +88,41 @@ export class ActivitesComponent  implements OnInit {
     this.act.deleteAct(id).subscribe();
   }
 
+  
+  modifyActivity() {
+    const selectedEvent = this.lesact.find(event => event.id === this.modifyId);
+    if (selectedEvent) {
+      this.showModifyForm = true; 
+      this.modifyForm = this.fb.group({
+        id: [selectedEvent.id, Validators.required],
+        libelle: [selectedEvent.libelle, [Validators.required, Validators.minLength(20)]],
+        nbP: [selectedEvent.nbP, [Validators.required, Validators.min(10)]],
+        type: [selectedEvent.type],
+        comite: [selectedEvent.comite],
+        date: [selectedEvent.date],
+        lieu: this.fb.array(selectedEvent.lieu || []) 
+      });
+    } else {
+      alert("L'activité d'ID " + this.modifyId + " n'a pas été trouvée pour modification.");
+    }
+  }
+  
+  onSaveChanges() {
+    if (this.modifyForm.valid) {
+      const modifiedEvent = this.modifyForm.value;
+      const modifiedIndex = this.lesact.findIndex(event => event.id === modifiedEvent.id);
+      if (modifiedIndex !== -1) {
+        this.lesact[modifiedIndex] = modifiedEvent;
+        this.showModifyForm = false;
+      } else {
+        alert("L'activité d'ID " + modifiedEvent.id + " n'a pas été trouvée pour modification.");
+      }
+    } 
+  }
+  
+cancelModification() {
+  this.showModifyForm = false;
+}
   onLogout(){
     this.router.navigate(['/login']);return true ;
   }

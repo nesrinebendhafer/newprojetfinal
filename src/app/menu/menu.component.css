@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ffb3b3;
+  background: red;
 }
 img {
   width: 100px;
@@ -11,7 +11,6 @@ img {
 
 .header {
   overflow: hidden;
-  background-color: #ffb3b3;
   padding-top: 5px;
 }
 

@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "libelle": "Collecte de fonds  ",
+      "nbP": 200,
+      "type": true,
+      "comite": "Ariana",
+      "date": "2023-11-20",
+      "lieu": [
+        "Raoued",
+        "Marsa"
+      ]
+    },
+    {
+      "id": 2,
+      "libelle": "Collecte de fonds pour le peuple palestinien ",
+      "nbP": 150,
+      "type": false,
+      "comite": "Bizerte",
+      "date": "2023-11-9",
+      "lieu": [
+        "Ariana"
+      ]
+    },
+    {
+      "id": 3,
+      "libelle": "LIVRER LES DONS À LAGENCE NATIONALE",
+      "nbP": 100,
+      "type": false,
+      "comite": "Gbeli",
+      "date": "2023-10-28",
+      "lieu": [
+        "Megrine"
+      ]
+    },
+    {
+      "id": 4,
+      "libelle": " LA PARTICIPATION DE LA DÉLÉGATION",
+      "nbP": 300,
+      "type": true,
+      "comite": "Rades",
+      "date": "2023-03-02",
+      "lieu": [
+        "Manouba",
+        "Tunis"
+      ]
+    },
+    {
+      "id": 5,
+      "libelle": "TRI DES PRODUIT  a soukra",
+      "nbP": 30,
+      "type": true,
+      "comite": "Ariana",
+      "date": "2023-03-12",
+      "lieu": [
+        "Soukra",
+        "MG Ariana"
+      ]
+    },
+    {
+      "id": 6,
+      "libelle": " JOURNÉE DES VOLONTAIRES ARTISTES",
+      "nbP": 100,
+      "type": true,
+      "comite": "Ariana",
+      "date": "2023-01-12",
+      "lieu": [
+        "Menzah 6",
+        "Marsa"
+      ]
+    }
+  ]
+}

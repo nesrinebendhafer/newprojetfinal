@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card bg-light p-3 mb-3">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center mb-3">
+          <p class="badge bg-danger text-white me-2 bigger-badge">{{event.id}}</p>
+          <h3 class="mb-0">{{event.libelle|uppercase}}</h3>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <p class="mb-0"><strong>Date:</strong> {{event.date|date:'fullDate'}}</p>
+          <p class="mb-0"><strong>Lieu:</strong> {{event.lieu}}</p>
+        </div>
+        <button class="btn btn-danger mb-3" (click)="affiche()">Afficher la description</button>
+        <div *ngIf="clicked">
+          <p>{{event.description|nesrineanes}}</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end">
+        <img [src]="event.image" class="img-fluid img-thumbnail smaller-image" alt="Event Image">
+      </div>
+    </div>
+  </div>
+</div>

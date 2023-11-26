@@ -1,0 +1,113 @@
+
+#shop{
+    background-color: #ffffff;
+    flex-direction: column;
+}
+
+#shop-welcome{
+    text-align: center;
+    font-family: Zen_Dots;
+    font-size: 4vw;
+    margin-bottom: 5%;
+}
+
+
+.product{
+    display: flex;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    margin-bottom: 3%;
+}
+
+
+.prod-img{
+    display: flex;
+    width: 30%;
+}
+
+.prod-description{
+    width: 45%;
+    display: flex;
+    padding-left: 3%;
+    flex-direction: column;
+
+}
+
+@media screen and (max-width:700px) {
+    .product{
+         flex-direction: column;
+         margin: auto;
+    }
+    .prod-img{
+         width: 90%;
+         margin: auto;
+         margin-top: 3%;
+    }
+    .prod-description{
+         width: 100%;
+    }
+    .pb{
+         margin: auto;
+    }
+    
+}
+
+.product-name{
+    display: flex;
+    margin-bottom: 0%;
+    font-family: Zen_Dots;
+}
+
+.price{
+    font-size: 25px;
+    color: red;
+    margin-top: 0px;
+    margin-left: 10px;
+
+}
+
+.product-color{
+    display: flex;
+}
+
+.product-size{
+    display: flex;
+}
+
+.radio{
+    margin-left: 5%;
+    margin-right: 10px;
+    display: flex;
+}
+
+.quantity{
+    display: flex;
+    margin: auto;
+}
+
+#q{
+    margin-right: 1%;
+}
+
+#input-q{
+    width: 50px;
+    margin-left: 5%;
+}
+
+.pb{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 3%;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+.inner-button{
+    display: flex;
+    margin: auto;
+    font-family: zen_dots;
+}

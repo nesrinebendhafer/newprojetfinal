@@ -1,0 +1,120 @@
+<div class="banner">
+  <div id="titles">
+    <h1 id="title1">Discover<br />the humanity,<br />differently</h1>
+    <h2 id="title2">1st Croissant Rouge Website in Tunisia</h2>
+  </div>
+</div>
+<hr />
+<br /><br />
+<h1 class="utitle">News</h1>
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let i of news">
+      <a class="link" href="#">
+        <img class="imgnews img-fluid" [src]="i.image" alt="News Image" />
+        <p class="date">{{ i.date }}</p>
+        <p class="new">{{ i.paragraphe }}</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<section id="reviews" class="reviews text-center section">
+  <div class="container">
+      <div class="row">
+          <div class="text-center col-md-6 col-md-offset-3">
+              <h2 class="section-title">Les Principes fondamentaux de la Croix Croissant Rouge</h2>
+          </div>
+      </div>
+      <div class="section-body">
+          <div class="row" style="height: 500px">
+              <div class="review-carousel carousel">
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/humanite.jpg">
+                          <h3>HUMANITÉ</h3>
+                          <p>
+                              Né du souci de porter secours sans discrimination aux blessés des champs de
+                              bataille, le Mouvement International de la Croix-Rouge et du Croissant-Rouge,
+                              s'efforce de prévenir et d'alléger en toutes circonstances les souffrances
+                              humaine.
+                              Il tend à protéger la vie et la santé ainsi qu'à faire respecter la personne
+                              humaine.
+                              Il favorise la compréhension mutuelle, l'amitié, la coopération et une paix
+                              durable
+                              entre tous les peuples.
+                      </div>
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/IMPARTIALITe.jpg">
+                          <h3 class="">IMPARTIALITÉ </h3>
+                          <p>
+                              Il ne fait aucune distinction de nationalité, de race, de religion, de condition
+                              sociale et d'appartenance politique. Il s'applique seulement à secourir les
+                              individus à la mesure de leur souffrance et à subvenir par priorité aux
+                              détresses les plus urgentes
+                            <br>
+                            <br>
+                      </div>
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/NEUTRALITe.jpg">
+                          <h3>NEUTRALITÉ </h3>
+                          <p>
+                              Afin de garder la confiance de tous, le mouvement s'abstient de prendre part aux
+                              hostilités et, en tout temps, aux controverses d'ordre politique, racial,
+                              religieux et idéologique.
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                      </div>
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/INDePENDANCE.jpg">
+                          <h3>INDÉPENDANCE</h3>
+                          <p>
+                              Le Mouvement est indépendant. Auxiliaires des pouvoirs publics dans leurs
+                              activités humanitaires et soumises aux lois qui régissent leurs pays respectifs,
+                              les Sociétés Nationales doivent pourtant conserver une autonomie qui leur
+                              permette d'agir toujours selon les principes du Mouvement.</div>
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/Volontariat.jpg">
+                          <h3>VOLONTARIAT</h3>
+                          <p>
+                              Il est un Mouvement de secours volontaire et désintéressé.
+                            <br><br><br><br><br><br>
+                      </div>
+
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/unité.jpg">
+                          <h3>UNITÉ </h3>
+                          <p>
+                              Il ne peut y avoir qu'une seule société de la Croix-Rouge ou du Croissant-Rouge
+                              dans un même pays. Elle doit être ouverte à tous et étendre son action
+                              humanitaire au territoire entier.</div>
+                  </div>
+                  <div class="review">
+                      <div class="text-center">
+                          <img alt="" class="img-circle" src="../../assets/Universalité.jpg">
+                          <h3>UNIVERSALITÉ</h3>
+                          <p>
+                              Le Mouvement international de la Croix-Rouge et du Croissant-Rouge, au sein
+                              duquel toutes les sociétés ont des droits égaux et le devoir de s'entraider, est
+                              universel.</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

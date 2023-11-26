@@ -1,0 +1,89 @@
+<h1 id="shop-welcome">Welcome to CRT shop</h1>
+
+<div class="product">
+  <img id="product1" class="prod-img" src="../../assets/blanc.png" />
+  <div class="prod-description">
+    <h1 class="product-name">Product1</h1>
+    <h2 class="price">40Dt</h2>
+    <div class="color">
+      <p class="product-color">
+        Color :
+        <input
+          class="radio"
+          id="white1"
+          type="radio"
+          name="color"
+          value="white"
+          (onClick)="colorwhite1()"
+        />White
+        <input
+          class="radio"
+          id="blue1"
+          type="radio"
+          name="color"
+          value="blue"
+          (onClick)="colorred1()"
+        />red
+      </p>
+      <div class="size">
+        <p class="product-size">
+          Size : <input class="radio" type="radio" name="size" value="s" />S
+          <input class="radio" type="radio" name="size" value="m" checked />M
+          <input class="radio" type="radio" name="size" value="l" />L
+          <input class="radio" type="radio" name="size" value="xl" />XL
+        </p>
+        <div class="quantity">
+          <span id="q">Quantity :</span
+          ><input id="input-q" type="number" required />
+        </div>
+      </div>
+      <button onclick="buy1()" class="pb" id="pb1">
+        <span class="inner-button">ADD TO CARD</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product">
+  <img id="product2" class="prod-img" src="../../assets/rouge.png" />
+  <div class="prod-description">
+    <h1 class="product-name">Product2</h1>
+    <h2 class="price">60Dt</h2>
+    <div class="color">
+      <p class="product-color">
+        Color :
+        <input
+          class="radio"
+          id="white2"
+          type="radio"
+          name="color"
+          value="white"
+          onchange="colorwhite2()"
+        />White
+        <input
+          class="radio"
+          id="blue2"
+          type="radio"
+          name="color"
+          value="blue"
+          onchange="colorred2()"
+        />Blue
+      </p>
+      <div class="size">
+        <p class="product-size">
+          Size : <input class="radio" type="radio" name="size" value="s" />S
+          <input class="radio" type="radio" name="size" value="m" checked />M
+          <input class="radio" type="radio" name="size" value="l" />L
+          <input class="radio" type="radio" name="size" value="xl" />XL
+        </p>
+        <div class="quantity">
+          <span id="q">Quantity :</span
+          ><input id="input-q" type="number" required />
+        </div>
+      </div>
+      <button onclick="buy1()" class="pb" id="pb1">
+        <span class="inner-button">ADD TO CARD</span>
+      </button>
+    </div>
+  </div>
+</div>

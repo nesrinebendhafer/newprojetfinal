@@ -1,0 +1,24 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .form-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  
+  .btn {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  .btn:hover {
+    background-color: #000;
+    color: white;
+  }
+  

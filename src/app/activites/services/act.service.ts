@@ -13,9 +13,14 @@ export class ActService {
   public getAct(): Observable<Act[]>{
     return this.http.get<Act[]>(URL);
   }
-
+  public getActById(id:number):Observable<Act>{
+    return this.http.get<Act>(`${URL}/${id}`)
+  }
   public addAct(a:Act): Observable<Act>{
     return this.http.post<Act>(URL, a);
+  }
+  public updateAct(id:number,a:Act):Observable<Act>{
+    return this.http.put<Act>(URL+"/"+id, a);
   }
   public deleteAct(id:number){
     return this.http.delete(URL+"/"+id);

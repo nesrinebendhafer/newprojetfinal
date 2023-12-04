@@ -3,6 +3,7 @@
     {
       "id": 1,
       "libelle": "Collecte de fonds  ",
+      "photo": "../../assets/event1.jpg",
       "nbP": 200,
       "type": true,
       "comite": "Ariana",
@@ -10,33 +11,39 @@
       "lieu": [
         "Raoued",
         "Marsa"
-      ]
+      ],
+      "description": "Collecte de fonds pour le peuple palestinien le 12 novembre 2023 en partenariat avec lassociation Qantara Al Ghazala sur la place Sherine Abu Aqil 🇹🇳"
     },
     {
       "id": 2,
       "libelle": "Collecte de fonds pour le peuple palestinien ",
+      "photo": "../../assets/event2.jpg",
       "nbP": 150,
       "type": false,
       "comite": "Bizerte",
       "date": "2023-11-9",
       "lieu": [
         "Ariana"
-      ]
+      ],
+      "description": "Le départ des voitures vers Maghrine pour livrer les dons à lAgence nationale au siège de Maghrine"
     },
     {
       "id": 3,
       "libelle": "LIVRER LES DONS À LAGENCE NATIONALE",
+      "photo": "../../assets/event3.jpg",
       "nbP": 100,
       "type": false,
       "comite": "Gbeli",
       "date": "2023-10-28",
       "lieu": [
         "Megrine"
-      ]
+      ],
+      "description": "La participation de la délégation locale de la Croix-Rouge tunisienne à Raoued et de la délégation locale de la Manouba, sous la supervision de la délégation nationale, à la célébration du Jour mondial de la protection civile le 1er mars avec la Protection civile dAriana sous le thème Le rôle de linformation dans lidentification des risques"
     },
     {
       "id": 4,
       "libelle": " LA PARTICIPATION DE LA DÉLÉGATION",
+      "photo": "../../assets/event4.jpg",
       "nbP": 300,
       "type": true,
       "comite": "Rades",
@@ -44,11 +51,13 @@
       "lieu": [
         "Manouba",
         "Tunis"
-      ]
+      ],
+      "description": "Suite à la campagne nationale pour aider nos frères en Syrie et en Turquie, annoncée par Son Excellence le Président de la République, la campagne de collecte de fonds a débuté à la municipalité de MG Ariana"
     },
     {
       "id": 5,
       "libelle": "TRI DES PRODUIT  a soukra",
+      "photo": "../../assets/event5.jpg",
       "nbP": 30,
       "type": true,
       "comite": "Ariana",
@@ -56,19 +65,34 @@
       "lieu": [
         "Soukra",
         "MG Ariana"
-      ]
+      ],
+      "description": "Journée des volontaires artistes, lors de laquelle les bénévoles présentent leurs œuvres en présence du jury et de grands artistes"
+    }
+  ],
+  "logins": [
+    {
+      "id": 1,
+      "username": "directeur",
+      "pwd": "pwdDirecteur",
+      "role": "Other"
     },
     {
-      "id": 6,
-      "libelle": " JOURNÉE DES VOLONTAIRES ARTISTES",
-      "nbP": 100,
-      "type": true,
-      "comite": "Ariana",
-      "date": "2023-01-12",
-      "lieu": [
-        "Menzah 6",
-        "Marsa"
-      ]
+      "id": 2,
+      "username": "admin",
+      "pwd": "pwdAdmin",
+      "role": "Admin"
+    },
+    {
+      "id": 3,
+      "username": "admin2",
+      "pwd": "pwdAdmin2",
+      "role": "Admin"
+    },
+    {
+      "id": 4,
+      "username": "agent",
+      "pwd": "pwdAgent",
+      "role": "Other"
     }
   ]
 }

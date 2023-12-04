@@ -7,11 +7,13 @@ export class Act {
     constructor(
         public id:number ,
         public libelle: string,
+        public photo :string,
         public nbP:number,
         public type:boolean,
         public comite:Comite ,
         public date:Date,
-        public lieu:string[]
+        public lieu:string[],
+        public description:string
     ){}
 }
       

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/activity/activite"
+          >Liste des Activités</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/activity/ajouteractivite"
+          >Ajout d'une Activité</a
+        >
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" (click)="onDisconnect()">Déconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,54 @@
+<div class="container">
+  <h3>activite num : {{ act.id }}</h3>
+  <div class="d-flex justify-content-between">
+    <div>
+      <img [src]="act.photo" alt="">
+      <ul>
+        <li><strong>libelle</strong>: {{ act.libelle | uppercase }}</li>
+        <li><strong> Nombre de Participants:</strong> {{ act.nbP }}</li>
+        <li><strong> Comité</strong> {{ act.comite }}</li>
+      </ul>
+      
+      
+    </div>
+    <div>
+      <button
+        type="button"
+        (click)="toggleDisplay()"
+        class="btn btn-primary">
+        Modifier
+      </button>
+      <button
+        type="button"
+        (click)="onSupprimer(act.id)"
+        class="btn btn-secondary mr-2">
+        <i class="fa-solid fa-trash-can"></i>
+        Supprimer
+      </button>
+      
+    </div>
+  </div>
+  <div *ngIf="display">
+    <form (submit)="onModifier()">
+
+      <input type="text" [(ngModel)]="act.libelle" name="libelle" placeholder="Libelle">
+      <input type="number" [(ngModel)]="act.nbP" name="nbP" placeholder="Nombre de Participants">
+      <select
+          class="form-select"
+          name="searchComite"
+          [(ngModel)]="act.comite"
+          placeholder="Enter Comite"
+        >
+          <option value="" disabled>Select a Comite</option>
+          <option *ngFor="let comite of lescomite" [value]="comite">
+            {{ comite }}
+          </option>
+        </select>
+
+      <button type="submit" class="btn btn-success mt-2">Valider</button>
+      <button type="button" class="btn btn-danger mt-2" (click)="cancelModification()">Annuler</button>
+    </form>
+  </div>
+</div>
+
+

@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Liste des activites</h2>
+    <form>
+      <div>
+        <select
+          class="form-select"
+          name="searchComite"
+          [(ngModel)]="searchComite"
+          placeholder="Enter Comite"
+        >
+          <option value="" disabled>Select a Comite</option>
+          <option *ngFor="let comite of lescomite" [value]="comite">
+            {{ comite }}
+          </option>
+        </select>
+  
+        <button class="btn btn-danger" (click)="searchByComite()">
+          <i class="fa-solid fa-magnifying-glass"></i> Chercher
+        </button>
+        <button
+          *ngIf="lesact.length > 0"
+          class="btn btn-secondary"
+          (click)="hideFoundEvents()"
+        >
+          Cacher
+        </button>
+      </div>
+    </form>
+    <br>
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let event of lesact; index as i">
+          <app-act [act]="event" (notify)="onSuppression($event)"></app-act>
+        </li>
+      </ul>
+    </div>
+  </div>

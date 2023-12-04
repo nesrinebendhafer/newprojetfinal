@@ -1,6 +1,1 @@
-.smaller-image {
-    max-width: 100%; 
-    height: auto;
-    max-height: 200px; 
-  }
-  
+img{height: 100px; width: 85px;}

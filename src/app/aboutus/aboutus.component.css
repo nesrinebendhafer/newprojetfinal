@@ -1,6 +1,6 @@
 .text-danger {
-  color: #dc3545; /* Bootstrap's red color */
-  font-size: 24px; /* Adjust as needed */
+  color: #dc3545; 
+  font-size: 24px;
   font-weight: bold;
   animation: slideInLeft 1s ease-in-out;
 }
@@ -17,7 +17,7 @@
 }
 
 .progress-bar {
-  background-color: #dc3545; /* Bootstrap's red color */
+  background-color: #dc3545; 
   animation: progressWidth 1s ease-in-out;
 }
 
@@ -28,7 +28,7 @@
 }
 
 hr {
-  border-top: 2px solid #dc3545; /* Bootstrap's red color */
+  border-top: 2px solid #dc3545; 
   animation: scaleWidth 1s ease-in-out;
 }
 
@@ -39,10 +39,10 @@ hr {
 }
 
 .redd {
-  color: #770000; /* Dark red color */
+  color: #770000;
   font-weight: bold;
-  font-size: 28px; /* Adjust as needed */
-  font-family: 'Arial', sans-serif; /* Use a more common font */
+  font-size: 28px; 
+  font-family: 'Arial', sans-serif;
   animation: fadeIn 1s ease-in-out;
 }
 

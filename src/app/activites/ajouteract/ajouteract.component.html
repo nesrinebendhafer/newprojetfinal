@@ -1,0 +1,105 @@
+<div class="container mt-4">
+    <div class="card p-4 bg-light">
+      <h3 class="card-title mb-4">Ajout d'une Activité</h3>
+      <form
+        [formGroup]="actForm"
+        (ngSubmit)="onSubmitForm()"
+        class="bg-white p-4"
+        (onSubmit)="onResetForm()"
+      >
+        <div class="mb-3">
+          <label class="form-label">Libellé</label>
+          <input
+            type="text"
+            class="form-control"
+            name="lib"
+            formControlName="libelle"
+          />
+        </div>
+        <div *ngIf="isValidPattern()" class="alert alert-danger">
+          le libellé doit contenir au minimum 20 caractéres
+        </div>
+        <div *ngIf="isValidrequired()" class="alert alert-warning">
+          le libellé est obligatoire
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nombre De Volontaires</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nbP"
+            formControlName="nbP"
+          />
+        </div>
+        <div *ngIf="isValidnbP()" class="alert alert-danger">
+          le Nombre De Volontaires est obligatoire
+        </div>
+        <div *ngIf="isValidminnbP()" class="alert alert-warning">
+          le Nombre De Volontaires doit avoir 10 volontaires minimum
+        </div>
+        <div class="mb-3">
+          <label class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              name="type"
+              formControlName="type"
+            />
+            Individuelle
+          </label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Comité</label>
+          <select name="comitee" formControlName="comite" class="form-select">
+            <option *ngFor="let c of lescomite" [value]="c">{{ c }}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Photo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="photo"
+            formControlName="photo"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="date"
+            formControlName="date"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            name="description"
+            formControlName="description"
+            rows="4"
+          ></textarea>
+        </div>
+        <h5>Lieu</h5>
+        <div formArrayName="lieu">
+          <div *ngFor="let l of leslieu.controls; index as i" class="mb-3">
+            <label class="form-label">Lieu n° {{ i + 1 }}</label>
+            <input type="text" class="form-control" [formControlName]="i" />
+          </div>
+          <input
+            type="button"
+            value="Ajouter un lieu "
+            class="btn btn-secondary btn-sm mb-3"
+            (click)="onAjouter()"
+          />
+        </div>
+        <button class="btn btn-primary me-2" [disabled]="actForm.invalid">
+          <i class="fa-solid fa-plus"> </i>Ajouter
+        </button>
+        <button class="btn btn-secondary" (click)="onResetForm()">
+          <i class="fa-solid fa-eraser"></i> Effacer
+        </button>
+      </form>
+    </div>

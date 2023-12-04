@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
@@ -8,10 +9,46 @@ import { AuthService } from './auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor( private router: Router, private authService: AuthService){}
-
-  onLogin(logi:string, pwd: string){
-    if (this.authService.login(logi,pwd)){this.router.navigate(['/activity']);return true ;}
-    else{alert('tu doit saisir le données correctement!'); return false;}
+  loginForm!:FormGroup;
+  message:string="";
+  constructor(private fb:FormBuilder,
+    private AuthService:AuthService,
+    private router:Router){}
+  
+    ngOnInit(): void {
+        this.loginForm = this.fb.nonNullable.group({
+          username:['', Validators.required],
+          pwd:['', Validators.required]
+        })
+    }
+  
+    public get Username(){
+      return this.loginForm.get('username');
+    }
+  
+    public get Pwd(){
+      return this.loginForm.get('pwd');
+    }
+    authentifier(){
+      const {username, pwd}= this.loginForm.value; 
+      this.AuthService.login(username, pwd).subscribe(
+        users=> {
+          if(users.length ==0){
+            this.message = "Login ou mot de passe incorrect";
+            localStorage.setItem('role', 'none');
+          }  
+            else {
+              let role = users[0].role;
+              if( role == 'Admin')
+                this.router.navigate(["/activity"]);
+              else
+                this.router.navigate(["/events"]);
+              localStorage.setItem('role', role);
+              this.message="";
+            }          
+        }
+      )    
+    }
+  
   }
-}
+  
